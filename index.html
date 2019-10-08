@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/chat-general.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div id="contenedor-chat" >
+            <div class="container">
+                    <div class="row padding20">
+                      <div class="col-sm contenedor-chat-post" id="contChat">
+                        One of three columns
+                      </div>
+                    </div>
+                    <div class="row padding20">
+                            <div class="col-sm contenedor-chat-post">
+                              <textarea class="col-sm-8" id="texto"></textarea><button class="col-sm-4" onclick="envio()">Enviar</button>
+                            </div>
+                    </div>
+                  </div>
+        
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          setTimeout(()=>{
+            $('#contChat').load('recib.php');
+          },1000)
+            
+        });
+        function envio(){
+            var texto = $('#texto').val();
+            $.post("post.php", {texto: texto}, function(data, status){
+            console.log(data);
+            $('#contChat').load('recib.php');
+            });
+        }
+    </script>
+  </body>
+</html>
