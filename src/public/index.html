@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+ <html > 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>chat balcon5</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+    </head>
+    <body>
+
+            <div class="card" id="chat">
+                <div class="card body contTexto" id="contChatBox" >
+                      <div id="chatBox">
+
+                      </div> 
+                        
+                    
+                </div>
+                <div class="card-footer">
+                    <div class="input-group mb-3">
+                        <textarea class="form-control textArea" aria-label="With textarea" id="inputChat"></textarea>
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button" id="btnChat">Enviar</button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="card" id="login">
+                    <div class="card body contTexto">
+                            <div class="form-group ">
+                                <p class="text-center">Tu nombre es?</p>
+                                <input class="form-control" aria-label="With textarea" id="inputLog">
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="button" id="btnLog">Entrar</button>
+                    </div>
+                </div>
+                <div class="list-group" id="clientes">
+                        
+                      </div>
+                      
+            <script src="js/jquery.js"></script>
+            <script src="socket.io/socket.io.js"></script>
+            <script src="js/main.js"></script>
+    </body>
+</html>
